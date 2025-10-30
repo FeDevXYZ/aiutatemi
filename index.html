@@ -2,7 +2,19 @@
   <!DOCTYPE html>
   <html lang="en">
     <head>
-      <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "c8b1aa7c-66f2-4778-9749-1a11d4c2a670",
+      safari_web_id: "web.onesignal.auto.36762c33-c595-4251-8e66-ea9a822d3713",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Marconi Link</title>
